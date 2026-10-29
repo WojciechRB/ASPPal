@@ -29,15 +29,25 @@ The browser opens automatically and shows "Hello World!".
 
 If you don't see the template, open the Visual Studio Installer, click **Modify**, and install the **ASP.NET and web development** workload.
 
+## Option 3: JetBrains Rider
+
+1. On the Welcome screen, click **New solution**.
+2. In the left list, choose **ASP.NET Core Web Application** (under Web).
+3. Set a name (e.g. `HelloWorld`) and pick the **Empty** template.
+4. Choose your .NET SDK version, then click **Create**.
+5. Press **Shift+F10** (or click the green **Run** button).
+
+Rider starts the app and can open the browser for you, showing "Hello World!".
+
 ## Program.cs
 
-Both options generate the same code:
+All options generate the same code:
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!\n");
+app.MapGet("/", () => "Hello World!");
 
 app.Run();
 ```
